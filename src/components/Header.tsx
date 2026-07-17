@@ -69,13 +69,6 @@ export default function Header({
               <h1 className="text-lg md:text-xl font-bold tracking-tight text-white">
                 OUTPOST <span className="font-light opacity-80">Coffee</span>
               </h1>
-              <button
-                onClick={handleInstallClick}
-                className="inline-flex items-center justify-center p-1.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white border border-emerald-400/30 transition-all cursor-pointer shadow-xs shrink-0 active:scale-95"
-                title="Unduh Aplikasi ke Desktop / Home Screen"
-              >
-                <Download className="w-3.5 h-3.5 text-white animate-bounce-slow" />
-              </button>
             </div>
             <p className="text-[9px] text-white/60 tracking-wider font-sans uppercase">Made By RioProjectX</p>
           </div>
