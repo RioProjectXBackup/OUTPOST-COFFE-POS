@@ -2,8 +2,8 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!assets/|manifest.json|sw.js|outpost_logo.jpg|.*\\..*$).*)",
       "destination": "/index.html"
     }
   ]
-} 
+}
