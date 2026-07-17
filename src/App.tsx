@@ -522,6 +522,19 @@ export default function App() {
     syncMenuToLocalStorage(DEFAULT_MENU);
   };
 
+  const handleResetHistory = () => {
+    showConfirm({
+      title: 'Reset Riwayat Transaksi?',
+      message: 'Apakah Anda yakin ingin menghapus semua riwayat transaksi? Daftar menu, antrean, dan isi keranjang Anda tidak akan ikut terhapus.',
+      confirmText: 'Ya, Reset Riwayat',
+      cancelText: 'Batal',
+      variant: 'danger',
+      onConfirm: () => {
+        syncOrdersToLocalStorage([]);
+      },
+    });
+  };
+
   const handleResetAllData = () => {
     showConfirm({
       title: 'Reset Semua Data?',
@@ -561,7 +574,7 @@ export default function App() {
         {currentTab === 'cashier' ? (
           <div className="flex-1 flex flex-col lg:flex-row overflow-hidden relative">
             {/* Left Section: Catalog Grid */}
-            <div className="flex-1 p-6 overflow-hidden flex flex-col h-full">
+            <div className="flex-1 p-4 sm:p-6 bg-white overflow-hidden flex flex-col h-full border-r border-stone-200/50">
               <MenuGrid
                 menu={menu}
                 onSelectItem={handleSelectItem}
@@ -622,7 +635,7 @@ export default function App() {
           </div>
         ) : (
           /* Settings / Management tabs */
-          <div className="flex-1 p-6 overflow-hidden flex flex-col h-full">
+          <div className="flex-1 p-4 md:p-6 overflow-y-auto lg:overflow-hidden flex flex-col h-full">
             {currentTab === 'waiting-room' && (
               <WaitingRoomPanel
                 orders={orders}
@@ -655,7 +668,7 @@ export default function App() {
                 orders={orders}
                 onReprint={handleReprintOrder}
                 onRefund={handleRefundOrder}
-                onResetAllData={handleResetAllData}
+                onResetAllData={handleResetHistory}
                 onConfirmRequest={showConfirm}
               />
             )}

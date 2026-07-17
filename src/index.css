@@ -73,3 +73,12 @@
   background: rgba(255, 255, 255, 0.5);
 }
 
+/* Custom typography utilities for micro-layout text */
+.text-2xs {
+  font-size: 10px;
+}
+.text-3xs {
+  font-size: 8px;
+}
+
+

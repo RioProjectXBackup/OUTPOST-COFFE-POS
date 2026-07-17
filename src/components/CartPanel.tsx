@@ -105,25 +105,25 @@ export default function CartPanel({
                 <div className="flex gap-2 items-start">
                   <div className="flex-1">
                     <div className="flex items-center gap-1.5 flex-wrap">
-                      <h4 className="font-semibold text-[11px] text-stone-800 line-clamp-1">{item.menuItem.name}</h4>
+                      <h4 className="font-semibold text-[10px] sm:text-[11px] text-stone-800 line-clamp-1">{item.menuItem.name}</h4>
                       {item.customerName && (
-                        <span className="px-1 py-0.5 rounded bg-brand-green-900/10 text-brand-green-950 font-bold text-[8px] uppercase tracking-wide">
+                        <span className="px-1 py-0.5 rounded bg-brand-green-900/10 text-brand-green-950 font-bold text-[7px] sm:text-[8px] uppercase tracking-wide">
                           👤 {item.customerName}
                         </span>
                       )}
                     </div>
-                    <span className="text-[10px] text-brand-green-800 font-mono font-medium block mt-0.5">
+                    <span className="text-[9px] sm:text-[10px] text-brand-green-800 font-mono font-medium block mt-0.5">
                       {formatIDR(itemPriceSingle)}
                     </span>
                   </div>
-                  <span className="font-bold text-[11px] text-stone-900 font-sans">
+                  <span className="font-bold text-[10px] sm:text-[11px] text-stone-900 font-sans">
                     {formatIDR(calculateItemPrice(item))}
                   </span>
                 </div>
 
                 {/* Subdetails/Customizations */}
                 {hasOptions && (
-                  <div className="mt-1 flex flex-wrap gap-1 text-[9px] text-stone-500">
+                  <div className="mt-1 flex flex-wrap gap-1 text-[8px] sm:text-[9px] text-stone-500">
                     {item.temperature && (
                       <span className="bg-white border border-brand-cream-200 px-1 py-0.5 rounded text-stone-600 font-medium">
                         {item.temperature}
@@ -152,12 +152,12 @@ export default function CartPanel({
 
                 {/* Notes bar */}
                 {item.notes ? (
-                  <div className="mt-1.5 flex items-center gap-1.5 text-[9px] italic text-brand-cream-900 bg-amber-50/50 py-0.5 px-1.5 rounded border border-amber-100/40">
+                  <div className="mt-1.5 flex items-center gap-1.5 text-[8px] sm:text-[9px] italic text-brand-cream-900 bg-amber-50/50 py-0.5 px-1.5 rounded border border-amber-100/40">
                     <NotebookPen className="w-2.5 h-2.5 text-brand-cream-800" />
                     <span className="truncate flex-1">{item.notes}</span>
                     <button
                       onClick={() => onOpenCustomizer(item)}
-                      className="text-[9px] font-semibold text-stone-500 hover:text-stone-700"
+                      className="text-[8px] sm:text-[9px] font-semibold text-stone-500 hover:text-stone-700"
                     >
                       Ubah
                     </button>
@@ -169,7 +169,7 @@ export default function CartPanel({
                   {/* Edit Customization Trigger */}
                   <button
                     onClick={() => onOpenCustomizer(item)}
-                    className="text-[9px] text-brand-green-800 hover:text-brand-green-950 font-bold flex items-center gap-1 cursor-pointer"
+                    className="text-[8px] sm:text-[9px] text-brand-green-800 hover:text-brand-green-950 font-bold flex items-center gap-1 cursor-pointer"
                   >
                     <NotebookPen className="w-2.5 h-2.5" />
                     <span>Ubah Detail</span>

@@ -143,15 +143,15 @@ export default function CustomizerModal({
         </div>
 
         {/* Modal Footer with Pricing */}
-        <div className="px-6 py-4 bg-brand-cream-50 border-t border-brand-cream-200 flex items-center justify-between">
+        <div className="px-5 py-3 sm:px-6 sm:py-4 bg-brand-cream-50 border-t border-brand-cream-200 flex items-center justify-between">
           <div className="flex flex-col">
             <span className="text-3xs font-semibold text-stone-500 uppercase tracking-wider">Total Harga</span>
-            <span className="text-base font-extrabold text-brand-green-950 font-mono">{formatIDR(totalProductPrice)}</span>
+            <span className="text-sm sm:text-base font-extrabold text-brand-green-950 font-mono leading-none mt-0.5">{formatIDR(totalProductPrice)}</span>
           </div>
 
           <button
             onClick={handleSave}
-            className="bg-brand-green-900 text-white hover:bg-brand-green-950 font-bold px-5 py-3 rounded-xl flex items-center gap-2 shadow-md cursor-pointer transition-all active:scale-98 text-xs"
+            className="bg-brand-green-900 text-white hover:bg-brand-green-950 font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-lg sm:rounded-xl flex items-center gap-2 shadow-md cursor-pointer transition-all active:scale-98 text-[10px] sm:text-xs"
           >
             {existingCartItem ? 'Update Pesanan' : 'Tambahkan Pesanan'}
           </button>

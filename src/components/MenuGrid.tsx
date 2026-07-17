@@ -56,7 +56,7 @@ export default function MenuGrid({
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-1.5 py-0.5 sm:px-4 sm:py-2 rounded-lg text-[9px] sm:text-xs font-bold transition-all duration-150 cursor-pointer shrink-0 border ${
+                  className={`px-2 py-1 sm:px-4 sm:py-2 rounded-lg text-[9px] sm:text-xs font-bold transition-all duration-150 cursor-pointer shrink-0 border ${
                     isActive
                       ? 'bg-brand-green-900 text-white border-brand-green-900 shadow-xs'
                       : 'bg-white text-stone-600 border-brand-green-900/10 hover:bg-stone-50'
@@ -81,7 +81,7 @@ export default function MenuGrid({
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
             {filteredMenu.map((item) => {
               const hasOptions = item.options && (
                 (item.options.temperatures && item.options.temperatures.length > 0) ||
@@ -94,7 +94,7 @@ export default function MenuGrid({
                   key={item.id}
                   onClick={() => item.isAvailable && onSelectItem(item)}
                   disabled={!item.isAvailable}
-                  className={`group relative flex flex-col bg-white rounded-xl border border-brand-green-900/10 p-4 text-left transition-all ${
+                  className={`group relative flex flex-col bg-white rounded-xl border border-brand-green-900/10 p-3 sm:p-4 text-left transition-all ${
                     item.isAvailable
                       ? 'hover:shadow-md hover:border-brand-green-900 cursor-pointer active:scale-98 hover:ring-2 hover:ring-brand-green-900/10'
                       : 'opacity-65 cursor-not-allowed'
@@ -103,8 +103,8 @@ export default function MenuGrid({
                   {/* Info details */}
                   <div className="flex-1 flex flex-col justify-between w-full">
                     <div>
-                      <div className="flex justify-between items-center gap-1 mb-1.5">
-                        <span className="text-[9px] font-bold tracking-wider uppercase text-brand-green-900/60 font-sans">
+                      <div className="flex justify-between items-center gap-1 mb-1 sm:mb-1.5">
+                        <span className="text-[8.5px] sm:text-[9px] font-bold tracking-wider uppercase text-brand-green-900/60 font-sans">
                           {item.category}
                         </span>
                         {!item.isAvailable && (
@@ -113,12 +113,12 @@ export default function MenuGrid({
                           </span>
                         )}
                       </div>
-                      <h3 className="font-bold text-xs text-stone-800 leading-snug group-hover:text-brand-green-900 transition-colors line-clamp-2">
+                      <h3 className="font-bold text-[10px] sm:text-xs text-stone-800 leading-snug group-hover:text-brand-green-900 transition-colors line-clamp-2">
                         {item.name}
                       </h3>
                     </div>
-                    <div className="mt-2.5 flex items-baseline justify-between">
-                      <span className="text-[9.5px] sm:text-[11px] font-bold text-brand-green-900 font-sans">
+                    <div className="mt-2 sm:mt-2.5 flex items-baseline justify-between">
+                      <span className="text-[9px] sm:text-[11px] font-bold text-brand-green-900 font-sans">
                         {formatIDR(item.price)}
                       </span>
                     </div>

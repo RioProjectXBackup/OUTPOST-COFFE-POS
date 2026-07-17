@@ -74,7 +74,7 @@ export default function HistoryPanel({ orders, onReprint, onRefund, onResetAllDa
             className="px-3.5 py-2 bg-rose-50 hover:bg-rose-100 text-rose-600 rounded-xl font-bold text-2xs sm:text-xs flex items-center gap-1.5 transition-colors border border-rose-200/50 cursor-pointer"
           >
             <RotateCcw className="w-3.5 h-3.5" />
-            <span>Reset Semua Data</span>
+            <span>Reset Riwayat</span>
           </button>
         )}
       </div>
