@@ -1,0 +1,6 @@
+{
+  "name": "OUTPOST Coffee POS",
+  "description": "A simple, beautiful, and intuitive Point of Sale (POS) system for OUTPOST Coffee with menu customization, transaction history, and custom reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,18 @@
+{
+  "short_name": "POS Outpost",
+  "name": "POS Outpost Coffee",
+  "description": "Aplikasi Kasir Point of Sales untuk Outpost Coffee. Dilengkapi dengan sinkronisasi cloud real-time Firebase, manajemen menu, manajemen antrean, dan riwayat laporan keuangan.",
+  "icons": [
+    {
+      "src": "/src/assets/images/outpost_logo_1784247058428.jpg",
+      "type": "image/jpeg",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#1c1917",
+  "theme_color": "#1c1917",
+  "display": "standalone",
+  "orientation": "portrait"
+}
