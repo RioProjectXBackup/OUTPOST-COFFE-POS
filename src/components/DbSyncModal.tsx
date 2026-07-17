@@ -328,7 +328,7 @@ export default function DbSyncModal({
               <div className="flex flex-col md:flex-row gap-5 items-center">
                 <div className="w-24 h-24 rounded-2xl border border-stone-100 overflow-hidden shrink-0 shadow-lg p-2 bg-stone-50">
                   <img 
-                    src="/src/assets/images/outpost_logo_1784247058428.jpg" 
+                    src="/outpost_logo.jpg" 
                     alt="Logo Outpost" 
                     className="w-full h-full object-cover rounded-xl"
                   />

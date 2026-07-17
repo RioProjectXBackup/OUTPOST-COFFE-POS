@@ -38,14 +38,6 @@ export default function Header({
       {/* Brand Logo & Title */}
       <div className="flex items-center justify-between md:justify-start gap-3 w-full md:w-auto">
         <div className="flex items-center gap-2.5">
-          <div className="w-9 h-9 bg-white rounded-lg flex items-center justify-center shadow-sm shrink-0 overflow-hidden">
-            <img
-              src="/src/assets/images/outpost_logo_1784247058428.jpg"
-              alt="Outpost Logo"
-              className="w-full h-full object-cover scale-110"
-              referrerPolicy="no-referrer"
-            />
-          </div>
           <div>
             <div className="flex items-center gap-2">
               <h1 className="text-lg md:text-xl font-bold tracking-tight text-white">
@@ -53,7 +45,7 @@ export default function Header({
               </h1>
               <span className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-white/15 text-white border border-white/20">
                 <Circle className="w-1.5 h-1.5 fill-green-400 text-green-400 animate-pulse" />
-                Aktif
+                Kasir
               </span>
             </div>
             <p className="text-[9px] text-white/60 tracking-wider font-sans uppercase">Point of Sale</p>

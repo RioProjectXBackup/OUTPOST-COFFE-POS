@@ -122,10 +122,10 @@ export default function MenuManagerPanel({
   };
 
   return (
-    <div className="flex-1 flex flex-col md:flex-row gap-5 overflow-hidden h-full font-sans">
+    <div className="flex-1 flex flex-col md:flex-row gap-5 overflow-y-auto md:overflow-hidden h-full font-sans">
       
       {/* Left panel: List of all menu items */}
-      <div className="flex-1 bg-white border border-brand-cream-200 rounded-2xl p-4 flex flex-col h-full overflow-hidden">
+      <div className="w-full md:flex-1 bg-white border border-brand-cream-200 rounded-2xl p-4 flex flex-col h-[400px] md:h-full overflow-hidden shrink-0">
         <div className="flex items-center justify-between mb-4 pb-2 border-b border-brand-cream-200">
           <div>
             <h3 className="font-bold text-stone-800 text-sm tracking-wide uppercase">Daftar Menu Aktif</h3>
@@ -144,7 +144,7 @@ export default function MenuManagerPanel({
         </div>
 
         {/* Menu Scroller Table */}
-        <div className="flex-1 overflow-y-auto no-scrollbar">
+        <div className="flex-1 overflow-y-auto pr-1">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pb-4">
             {menu.map((item) => (
               <div
